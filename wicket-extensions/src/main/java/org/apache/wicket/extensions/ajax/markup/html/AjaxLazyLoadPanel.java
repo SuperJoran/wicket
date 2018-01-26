@@ -176,8 +176,6 @@ public abstract class AjaxLazyLoadPanel<T extends Component> extends Panel
 	protected void onInitialize()
 	{
 		super.onInitialize();
-
-		initTimer();
 	}
 
 	/**
@@ -205,6 +203,8 @@ public abstract class AjaxLazyLoadPanel<T extends Component> extends Panel
 	protected void onConfigure()
 	{
 		super.onConfigure();
+
+		this.initTimer();
 
 		if (get(CONTENT_ID) == null) {
 			add(getLoadingComponent(CONTENT_ID));
